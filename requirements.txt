@@ -3,3 +3,4 @@ yfinance
 plotly
 pandas
 numpy
+google-generativeai
