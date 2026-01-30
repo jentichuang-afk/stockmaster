@@ -7,19 +7,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import google.generativeai as genai
 
-# --- 🔴 診斷代碼 (請貼在 import 之後，頁面設定之前) ---
-import google.generativeai as genai
-import streamlit as st
 
-st.error(f"🔍 目前安裝的 AI 套件版本: {genai.__version__}")
-
-try:
-    st.write("🔑 您的 API Key 目前能使用的模型清單：")
-    for m in genai.list_models():
-        if 'gemini' in m.name:
-            st.code(m.name)
-except Exception as e:
-    st.error(f"❌ 連線測試失敗: {e}")
 # ----------------------------------------------------
 
 # --- 1. 頁面設定 ---
@@ -228,6 +216,7 @@ if run_btn and ticker_input:
 
 else:
     st.info("👈 請在側邊欄輸入股票代碼並按下按鈕")
+
 
 
 
