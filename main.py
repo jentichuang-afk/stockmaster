@@ -30,7 +30,7 @@ st.title("🧠 股票大師：真·AI 戰情室 (Powered by Gemini)")
 try:
     api_key = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-2.5-pro') # 使用快速且免費額度較高的模型
+    model = genai.GenerativeModel('gemini-2.5-flash') # 使用快速且免費額度較高的模型
     ai_available = True
 except Exception as e:
     ai_available = False
@@ -228,6 +228,7 @@ if run_btn and ticker_input:
 
 else:
     st.info("👈 請在側邊欄輸入股票代碼並按下按鈕")
+
 
 
 
